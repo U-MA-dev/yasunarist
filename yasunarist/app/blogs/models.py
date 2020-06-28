@@ -18,6 +18,7 @@ class Post(models.Model):
     text = models.TextField('本文')
     category = models.ForeignKey(
         Category, verbose_name='カテゴリ', on_delete=models.PROTECT)
+    is_published = models.BooleanField(default=False, verbose_name="公開フラグ")
     is_deleted = models.BooleanField(default=False, verbose_name="削除フラグ")
     created_at = models.DateTimeField('作成日', default=timezone.now)
 
