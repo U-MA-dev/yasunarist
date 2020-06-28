@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+test
+{% endblock %}
+{% block breadthumb %}
+<li>
+  <a href="/" itemprop="url">
+    <span itemprop="title">TOPページ&nbsp;&nbsp;>&nbsp;</span>
+  </a>
+</li>
+<li>
+  <a href="{% url 'blogs:blog_list' %}" itemprop="url">
+    <span itemprop="title">ブログ&nbsp;&nbsp;>&nbsp;</span>
+  </a>
+</li>
+{% endblock %}
+{% block content %}
+{% endblock %}
